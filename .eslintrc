@@ -1,0 +1,40 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "env": {
+    "browser": true,
+    "node": false
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js"]
+      }
+    ],
+    "react/prop-types": "off"
+  },
+  "overrides": [
+    {
+      "files": ["gatsby-*.js"],
+      "env": {
+        "browser": false,
+        "node": true
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
