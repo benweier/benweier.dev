@@ -42,6 +42,20 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
+      },
+    },
+    'gatsby-plugin-sitemap',
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Ben Weier',
