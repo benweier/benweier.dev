@@ -1,0 +1,64 @@
+{
+  "name": "benweier.dev",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benweier/benweier.dev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benweier/benweier.dev/issues"
+  },
+  "author": {
+    "name": "Ben Weier",
+    "email": "ben.weier@gmail.com"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.7",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "babel-preset-gatsby": "^0.2.35",
+    "core-js": "^3.6.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "gatsby": "^2.19.43",
+    "gatsby-background-image": "^0.10.2",
+    "gatsby-image": "^2.2.43",
+    "gatsby-plugin-eslint": "^2.0.8",
+    "gatsby-plugin-favicon": "^3.1.6",
+    "gatsby-plugin-manifest": "^2.2.47",
+    "gatsby-plugin-offline": "^3.0.40",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.4.12",
+    "gatsby-plugin-styled-components": "^3.1.20",
+    "gatsby-source-filesystem": "^2.1.55",
+    "gatsby-transformer-sharp": "^2.3.18",
+    "prettier": "^1.19.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.9.0",
+    "react-is": "^16.8.0",
+    "rimraf": "^3.0.2",
+    "styled-components": "^5.0.1",
+    "styled-reset": "^4.1.1",
+    "webpack": "^4.42.0"
+  },
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "npm run clean && gatsby build",
+    "serve": "gatsby serve",
+    "clean": "rimraf .cache public",
+    "format": "prettier --write '**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}
