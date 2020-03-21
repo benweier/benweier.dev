@@ -5,7 +5,7 @@ import { Icons, Button } from './styled'
 
 const Links = () => {
   return (
-    <IconContext.Provider value={{ size: 28, color: '#313f47' }}>
+    <IconContext.Provider value={{ size: 28, color: 'currentColor' }}>
       <Icons>
         <Button href="https://github.com/benweier" aria-label="GitHub">
           <FaGithub />

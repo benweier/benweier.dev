@@ -8,6 +8,11 @@ const Avatar = styled.span`
   border-radius: 100%;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 0 0 1em rgba(255, 255, 255, 0.42);
 
+  @media (prefers-color-scheme: dark) {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.42),
+      0 0 0 1em rgba(255, 255, 255, 0.12);
+  }
+
   img {
     border-radius: 100%;
   }

@@ -6,11 +6,15 @@ const Button = styled.a`
   border-radius: 100%;
   line-height: 0;
   padding: 0.33em;
-  transition: background-color 0.2s ease;
+  transition: background-color 50ms ease;
 
   &:hover,
   &:focus {
     background-color: rgba(0, 0, 0, 0.08);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: rgba(255, 255, 255, 0.18);
+    }
   }
 
   svg {

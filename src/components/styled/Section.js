@@ -24,6 +24,10 @@ const Section = styled.section`
   position: relative;
   text-align: center;
   max-width: 23em;
+
+  @media (prefers-color-scheme: dark) {
+    background: rgba(35, 35, 35, 0.7);
+  }
 `
 
 export default Section

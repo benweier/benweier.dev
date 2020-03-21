@@ -8,6 +8,10 @@ const Text = styled.div`
   letter-spacing: 0.16em;
   padding: 0.5rem 0;
   color: #313f47;
+
+  @media (prefers-color-scheme: dark) {
+    color: whitesmoke;
+  }
 `
 
 export default Text

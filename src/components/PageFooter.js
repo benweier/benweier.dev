@@ -7,14 +7,14 @@ const Footer = styled.footer`
   align-self: flex-end;
   width: 100%;
   font-size: 0.9em;
-  color: rgba(255, 255, 255, 0.75);
+  color: whitesmoke;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.11em;
 `
 
 const FooterList = styled.ul`
-  color: #fff;
+  color: whitesmoke;
 `
 
 const FooterItem = styled.li`
