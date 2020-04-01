@@ -18,8 +18,8 @@ const Layout = ({ children }) => {
         relativePath: { eq: "stefan-stefancik--g7axSVst6Y-unsplash.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1440) {
-            ...GatsbyImageSharpFluid_withWebp
+          fixed(width: 1280) {
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
@@ -67,8 +67,8 @@ const Layout = ({ children }) => {
       >
         <html lang="en" />
       </Helmet>
-      <Global background={data.bg.childImageSharp.fluid.base64} />
-      <Background image={data.bg.childImageSharp.fluid}>
+      <Global background={data.bg.childImageSharp.fixed.base64} />
+      <Background image={data.bg.childImageSharp.fixed}>
         <Wrapper>{children}</Wrapper>
       </Background>
     </>
