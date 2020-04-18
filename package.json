@@ -61,6 +61,7 @@
   },
   "scripts": {
     "dev": "nps dev",
+    "dev:test": "nps test.dev",
     "build": "nps build",
     "serve": "nps serve",
     "format": "prettier --write '**/*.js'",

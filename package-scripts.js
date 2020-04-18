@@ -5,9 +5,10 @@ module.exports = {
     default: 'node index.js',
     lint: 'eslint .',
     test: {
-      default: series.nps('lint', 'test.cy'),
+      default: series.nps('lint', 'test.unit', 'test.ci'),
       unit: 'jest',
-      cy: series.nps('gatsby.build', 'cy.run'),
+      ci: series.nps('gatsby.build', 'cy.run'),
+      dev: series.nps('gatsby.build', 'cy.open'),
     },
     gatsby: {
       clean: 'rimraf .cache public',
