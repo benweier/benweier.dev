@@ -2549,7 +2549,7 @@ babel-plugin-transform-react-remove-prop-types@^0.4.24:
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.24.tgz#f2edaf9b4c6a5fbe5c1d678bfb531078c1555f3a"
   integrity sha512-eqj0hVcJUR57/Ug2zE1Yswsw4LhuqqHhD+8v120T1cl3kjg76QwtyBrdIk4WVwK+lAhBJVYCd/v+4nc4y+8JsA==
 
-babel-preset-gatsby@^0.3.1, babel-preset-gatsby@^0.3.3:
+babel-preset-gatsby@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-0.3.3.tgz#ddc97e3f3dee7a3d3b391af21b964d475b7153a2"
   integrity sha512-C3SJlC6ygjijn33pmVyYzteiqwBjFg2VfKEXqEBuy+thOXLtmqAIES62am++ynOW9PGynwgQXb24XoOERqUvbw==
@@ -5797,7 +5797,6 @@ fastq@^1.6.0:
 
 "favicons-webpack-plugin@https://github.com/Creatiwity/favicons-webpack-plugin.git#0872de414061baaad0a2853c77ae75bc38b8bbbf":
   version "0.0.9"
-  uid "0872de414061baaad0a2853c77ae75bc38b8bbbf"
   resolved "https://github.com/Creatiwity/favicons-webpack-plugin.git#0872de414061baaad0a2853c77ae75bc38b8bbbf"
   dependencies:
     core-js "^2.5.7"
