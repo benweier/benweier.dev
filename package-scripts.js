@@ -5,7 +5,7 @@ module.exports = {
     default: 'node index.js',
     lint: 'eslint .',
     test: {
-      default: series.nps('lint', 'test.unit', 'test.ci'),
+      default: series.nps('lint', 'test.ci'),
       unit: 'jest',
       ci: series.nps('gatsby.build', 'cy.run'),
       dev: series.nps('gatsby.build', 'cy.open'),
