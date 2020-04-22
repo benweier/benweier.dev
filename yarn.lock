@@ -2549,7 +2549,7 @@ babel-plugin-transform-react-remove-prop-types@^0.4.24:
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.24.tgz#f2edaf9b4c6a5fbe5c1d678bfb531078c1555f3a"
   integrity sha512-eqj0hVcJUR57/Ug2zE1Yswsw4LhuqqHhD+8v120T1cl3kjg76QwtyBrdIk4WVwK+lAhBJVYCd/v+4nc4y+8JsA==
 
-babel-preset-gatsby@^0.3.3, babel-preset-gatsby@^0.3.4:
+babel-preset-gatsby@^0.3.4:
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-0.3.4.tgz#85cec0075bf6bfd8271036d99f5db195ea1c050e"
   integrity sha512-ifDMkFf7VZOc7vT8LF5GQXl9EadBZTMaBbCRXH6YvkczwGbm6Alfg+8FFPv0pP7EFPXxrLw99CmnmncALWJeSA==
