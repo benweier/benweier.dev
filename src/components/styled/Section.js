@@ -8,7 +8,7 @@ const rotate = keyframes`
 
   to {
     transform: rotate(0);
-    opacity: 0.99;
+    opacity: 1;
   }
 `
 
@@ -17,10 +17,9 @@ const Section = styled.section`
   animation: ${rotate} 1s ease;
   padding: 2em 1em;
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   border-radius: 4px;
   width: 100%;
-  opacity: 0.95;
   position: relative;
   text-align: center;
   max-width: 23em;
