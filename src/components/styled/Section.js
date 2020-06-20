@@ -17,7 +17,6 @@ const Section = styled.section`
   animation: ${rotate} 1s ease;
   padding: 2em 1em;
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(4px);
   border-radius: 4px;
   width: 100%;
   position: relative;
@@ -25,7 +24,7 @@ const Section = styled.section`
   max-width: 23em;
 
   @media (prefers-color-scheme: dark) {
-    background: rgba(35, 35, 35, 0.7);
+    background: rgba(35, 35, 35, 0.8);
   }
 `
 
