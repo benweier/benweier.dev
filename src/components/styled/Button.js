@@ -6,7 +6,7 @@ const Button = styled.a`
   border-radius: 100%;
   line-height: 0;
   padding: 0.33em;
-  transition: background-color 50ms ease;
+  transition: background-color 100ms ease;
 
   &:hover,
   &:focus {
