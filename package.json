@@ -38,7 +38,7 @@
     "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-manifest": "^2.4.31",
-    "gatsby-plugin-offline": "^3.2.28",
+    "gatsby-plugin-offline": "^3.2.37",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sharp": "^2.6.36",
