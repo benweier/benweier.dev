@@ -32,6 +32,7 @@ module.exports = {
         path: path.join(__dirname, 'src', 'assets', 'images'),
       },
     },
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-sharp',
       options: {
