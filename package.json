@@ -59,7 +59,7 @@
     "rimraf": "^3.0.2",
     "styled-components": "^5.2.1",
     "styled-reset": "^4.3.4",
-    "tailwindcss": "^2.0.3",
+    "tailwindcss": "^2.0.4",
     "twin.macro": "^2.3.1",
     "webpack": "^5.27.2"
   },
