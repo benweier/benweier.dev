@@ -47,7 +47,7 @@
     "gatsby-plugin-sitemap": "^4.0.0",
     "gatsby-plugin-styled-components": "^4.4.0",
     "gatsby-source-filesystem": "^3.4.0",
-    "gatsby-transformer-sharp": "^3.3.0",
+    "gatsby-transformer-sharp": "^3.4.0",
     "nps": "^5.10.0",
     "nps-utils": "^1.7.0",
     "prettier": "^2.2.1",
