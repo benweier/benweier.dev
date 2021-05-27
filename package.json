@@ -19,7 +19,7 @@
     "@testing-library/cypress": "^7.0.6",
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.12.0",
-    "babel-preset-gatsby": "^1.4.0",
+    "babel-preset-gatsby": "^1.6.0",
     "core-js": "^3.13.0",
     "cypress": "^7.2.0",
     "eslint": "^7.25.0",
