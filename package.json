@@ -34,7 +34,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby": "^3.6.2",
     "gatsby-background-image": "^1.5.3",
-    "gatsby-core-utils": "^2.6.0",
+    "gatsby-core-utils": "^2.7.1",
     "gatsby-image": "^3.6.0",
     "gatsby-plugin-eslint": "^3.0.0",
     "gatsby-plugin-favicon": "^3.1.6",
