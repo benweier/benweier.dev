@@ -45,7 +45,7 @@
     "gatsby-plugin-robots-txt": "^1.6.2",
     "gatsby-plugin-sharp": "^3.7.1",
     "gatsby-plugin-sitemap": "^4.2.0",
-    "gatsby-plugin-styled-components": "^4.6.0",
+    "gatsby-plugin-styled-components": "^4.7.1",
     "gatsby-source-filesystem": "^3.7.1",
     "gatsby-transformer-sharp": "^3.6.0",
     "nps": "^5.10.0",
