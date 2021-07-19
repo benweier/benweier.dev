@@ -61,7 +61,7 @@
     "styled-reset": "^4.3.4",
     "tailwindcss": "^2.2.4",
     "twin.macro": "^2.6.2",
-    "webpack": "^5.45.0"
+    "webpack": "^5.45.1"
   },
   "scripts": {
     "dev": "nps dev",
