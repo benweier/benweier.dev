@@ -35,7 +35,7 @@
     "gatsby": "^3.11.0",
     "gatsby-background-image": "^1.5.3",
     "gatsby-core-utils": "^2.11.0",
-    "gatsby-image": "^3.9.0",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-eslint": "^3.0.0",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-image": "^1.11.0",
