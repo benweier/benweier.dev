@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
-    "@testing-library/cypress": "^8.0.1",
+    "@testing-library/cypress": "^8.0.2",
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.13.3",
     "babel-preset-gatsby": "^1.14.0",
