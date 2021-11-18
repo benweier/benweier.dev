@@ -32,7 +32,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "gatsby": "^3.14.5",
+    "gatsby": "^3.14.6",
     "gatsby-background-image": "^1.5.3",
     "gatsby-core-utils": "^3.1.2",
     "gatsby-image": "^3.11.0",
