@@ -20,7 +20,7 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^2.0.7",
     "babel-preset-gatsby": "^2.14.0",
-    "core-js": "^3.22.5",
+    "core-js": "^3.22.6",
     "cypress": "^9.6.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^19.0.4",
