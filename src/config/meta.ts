@@ -1,5 +1,5 @@
 export const meta = {
-  title: 'Ben Weier',
+  name: 'Ben Weier',
   role: 'Developer',
   description: 'Brisbane-based Developer specialising in React, Redux, and Next.js',
   url: 'https://benweier.dev',
