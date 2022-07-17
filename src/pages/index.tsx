@@ -1,11 +1,11 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
-import Image from 'next/future/image'
 import Head from 'next/head'
-import { IconContext } from 'react-icons'
-import { FaGithub, FaTwitter, FaEnvelope } from 'react-icons/fa'
+import { Avatar } from '@/components/Avatar'
+import { BackgroundImage } from '@/components/BackgroundImage'
+import { Links } from '@/components/Links'
+import { PhotoAttribution } from '@/components/PhotoAttribution'
 import { meta } from '@/config/meta'
 import { images } from '@/config/unsplash'
-import avatar from '@/images/avatar.png'
 
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image, year }) => {
   return (
@@ -31,28 +31,12 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image,
       </Head>
 
       <div className="max-w-screen relative min-h-screen bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-200">
-        {image && (
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width={image.width}
-            height={image.height}
-            className="absolute inset-0 h-full max-h-full w-full object-cover opacity-40 blur-sm"
-          />
-        )}
+        <BackgroundImage image={image} />
 
-        <div className="relative z-10 mx-8 grid min-h-screen grid-flow-row items-center justify-items-center gap-16 py-16 md:py-24 xl:py-32">
+        <div className="relative z-10 mx-8 grid min-h-screen grid-flow-row items-center justify-items-center gap-8 py-16 md:gap-16 md:py-24 xl:py-32">
           <main className="grid w-full max-w-xs grid-flow-row justify-items-center gap-8 rounded-md bg-gray-100/40 p-12 backdrop-blur dark:bg-gray-900/40">
             <div className="rounded-full bg-gray-900/5 p-5 dark:bg-gray-100/10">
-              <Image
-                src={avatar}
-                alt="Stylised avatar of Ben Weier"
-                width={132}
-                height={132}
-                className="rounded-full shadow-[0_0_10px_-5px_rgba(0,0,0,0.4)]"
-                placeholder="blur"
-                sizes="132px"
-              />
+              <Avatar />
             </div>
 
             <div className="text-center">
@@ -61,17 +45,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image,
             </div>
 
             <div className="grid grid-flow-col items-center justify-between gap-8">
-              <IconContext.Provider value={{ size: '28', color: 'currentColor' }}>
-                <a href="https://github.com/benweier" aria-label="GitHub" className="p-2" title="GitHub">
-                  <FaGithub />
-                </a>
-                <a href="https://twitter.com/benweier" aria-label="Twitter" className="p-2" title="Twitter">
-                  <FaTwitter />
-                </a>
-                <a href="mailto:web@benweier.dev" aria-label="Email" className="p-2" title="Email">
-                  <FaEnvelope />
-                </a>
-              </IconContext.Provider>
+              <Links />
             </div>
           </main>
 
@@ -79,18 +53,8 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image,
             <div>
               &copy; {meta.name} {year}
             </div>
-            {image && (
-              <div>
-                Photo by{' '}
-                <a className="underline" href={image.href}>
-                  {image.name}
-                </a>{' '}
-                on{' '}
-                <a className="underline" href="https://unsplash.com">
-                  Unsplash
-                </a>
-              </div>
-            )}
+
+            <PhotoAttribution image={image} />
           </footer>
         </div>
       </div>
