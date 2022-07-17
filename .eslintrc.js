@@ -88,34 +88,34 @@ module.exports = {
         'react/require-default-props': 'off',
       },
     },
-    {
-      files: ['cypress/**/*.tsx'],
-      plugins: ['cypress', 'testing-library'],
-      extends: ['plugin:cypress/recommended', 'plugin:testing-library/dom'],
-      env: {
-        'cypress/globals': true,
-      },
-    },
-    {
-      files: ['src/**/*.spec.tsx', 'src/**/*.test.tsx', 'test/**/*'],
-      plugins: ['jest', 'testing-library', 'jest-dom'],
-      extends: [
-        'plugin:jest/recommended',
-        'plugin:jest-dom/recommended',
-        'plugin:testing-library/dom',
-        'plugin:testing-library/react',
-      ],
-      env: {
-        'jest/globals': true,
-      },
-      settings: {
-        jest: {
-          version: 'detect',
-        },
-      },
-      rules: {
-        'testing-library/prefer-screen-queries': 'off',
-      },
-    },
+    // {
+    //   files: ['cypress/**/*.tsx'],
+    //   plugins: ['cypress', 'testing-library'],
+    //   extends: ['plugin:cypress/recommended', 'plugin:testing-library/dom'],
+    //   env: {
+    //     'cypress/globals': true,
+    //   },
+    // },
+    // {
+    //   files: ['src/**/*.spec.tsx', 'src/**/*.test.tsx', 'test/**/*'],
+    //   plugins: ['jest', 'testing-library', 'jest-dom'],
+    //   extends: [
+    //     'plugin:jest/recommended',
+    //     'plugin:jest-dom/recommended',
+    //     'plugin:testing-library/dom',
+    //     'plugin:testing-library/react',
+    //   ],
+    //   env: {
+    //     'jest/globals': true,
+    //   },
+    //   settings: {
+    //     jest: {
+    //       version: 'detect',
+    //     },
+    //   },
+    //   rules: {
+    //     'testing-library/prefer-screen-queries': 'off',
+    //   },
+    // },
   ],
 }
