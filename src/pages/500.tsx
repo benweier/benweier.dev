@@ -8,18 +8,20 @@ const InternalServerError: NextPage<InferGetStaticPropsType<typeof getStaticProp
   return (
     <>
       <Head>
-        <title>{meta.title}</title>
+        <title>
+          {meta.name} :: {meta.role}
+        </title>
         <meta name="description" content={meta.description} />
 
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={meta.title} />
+        <meta property="og:title" content={meta.name} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:url" content={meta.url} />
         <meta property="og:image" content={meta.image} />
         <meta property="og:site_name" content={meta.site} />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:title" content={meta.name} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:url" content={meta.url} />
         <meta name="twitter:site" content={meta.creator} />
@@ -43,7 +45,7 @@ const InternalServerError: NextPage<InferGetStaticPropsType<typeof getStaticProp
 
           <footer className="mx-8 grid w-full grid-flow-row items-center justify-center gap-4 text-center text-sm font-semibold md:grid-flow-col md:gap-8">
             <div>
-              &copy; {meta.title} {year}
+              &copy; {meta.name} {year}
             </div>
             {image && (
               <div>
