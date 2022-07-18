@@ -54,7 +54,14 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['.eslintrc.js', '.prettierrc.js', 'next.config.js', 'postcss.config.js', 'tailwind.config.js'],
+      files: [
+        '.eslintrc.js',
+        '.prettierrc.js',
+        'cypress.config.js',
+        'next.config.js',
+        'postcss.config.js',
+        'tailwind.config.js',
+      ],
       plugins: ['node'],
       extends: ['plugin:node/recommended'],
       env: {
@@ -88,14 +95,14 @@ module.exports = {
         'react/require-default-props': 'off',
       },
     },
-    // {
-    //   files: ['cypress/**/*.tsx'],
-    //   plugins: ['cypress', 'testing-library'],
-    //   extends: ['plugin:cypress/recommended', 'plugin:testing-library/dom'],
-    //   env: {
-    //     'cypress/globals': true,
-    //   },
-    // },
+    {
+      files: ['cypress/**/*.cy.{js,jsx,ts,tsx}'],
+      plugins: ['testing-library', 'cypress'],
+      extends: ['plugin:cypress/recommended'],
+      env: {
+        'cypress/globals': true,
+      },
+    },
     // {
     //   files: ['src/**/*.spec.tsx', 'src/**/*.test.tsx', 'test/**/*'],
     //   plugins: ['jest', 'testing-library', 'jest-dom'],
