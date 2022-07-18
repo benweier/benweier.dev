@@ -11,9 +11,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image,
   return (
     <>
       <Head>
-        <title>
-          {meta.name} :: {meta.role}
-        </title>
+        <title>{`${meta.name} :: ${meta.role}`}</title>
         <meta name="description" content={meta.description} />
 
         <meta property="og:type" content="website" />

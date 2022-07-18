@@ -8,9 +8,7 @@ const InternalServerError: NextPage<InferGetStaticPropsType<typeof getStaticProp
   return (
     <>
       <Head>
-        <title>
-          {meta.name} :: {meta.role}
-        </title>
+        <title>{`${meta.name} :: ${meta.role}`}</title>
         <meta name="description" content={meta.description} />
 
         <meta property="og:type" content="website" />
