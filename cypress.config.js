@@ -1,4 +1,6 @@
-module.exports = {
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
   projectId: 'y8wbgt',
   screenshotOnRunFailure: false,
   video: false,
@@ -11,9 +13,10 @@ module.exports = {
   },
 
   component: {
+    specPattern: 'src/**/*.cy.tsx',
     devServer: {
       framework: 'next',
       bundler: 'webpack',
     },
   },
-}
+})
