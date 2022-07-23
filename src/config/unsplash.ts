@@ -1,4 +1,13 @@
-export const images = [
+export type UnsplashImage = {
+  name: string
+  href: string
+  src: string
+  alt: string
+  width: number
+  height: number
+}
+
+export const images: UnsplashImage[] = [
   {
     name: 'Štefan Štefančík',
     href: 'https://unsplash.com/photos/-g7axSVst6Y',

@@ -4,7 +4,7 @@ import { BackgroundImage } from '@/components/BackgroundImage'
 import { Links } from '@/components/Links'
 import { PhotoAttribution } from '@/components/PhotoAttribution'
 import { meta } from '@/config/meta'
-import { images } from '@/config/unsplash'
+import { images, UnsplashImage } from '@/config/unsplash'
 
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image, year }) => {
   return (
@@ -42,7 +42,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image,
 }
 
 export const getStaticProps: GetStaticProps<{
-  image: typeof images[number]
+  image: UnsplashImage
   year: number
 }> = async () => {
   const index = Math.floor(Math.random() * images.length)
