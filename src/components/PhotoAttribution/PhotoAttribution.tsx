@@ -6,7 +6,7 @@ interface PhotoAttributionProps {
 
 export const PhotoAttribution = ({ image }: PhotoAttributionProps) => {
   return (
-    <div>
+    <div className="photo-attribution">
       Photo by{' '}
       <a className="underline" href={image.href}>
         {image.name}
