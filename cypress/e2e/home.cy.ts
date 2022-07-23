@@ -1,5 +1,5 @@
 context('benweier.dev', () => {
-  beforeEach(() => {
+  before(() => {
     cy.visit('/')
   })
 
