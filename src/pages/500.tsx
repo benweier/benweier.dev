@@ -1,30 +1,11 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Image from 'next/future/image'
-import Head from 'next/head'
 import { meta } from '@/config/meta'
 import { images } from '@/config/unsplash'
 
 const InternalServerError: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image, year }) => {
   return (
     <>
-      <Head>
-        <title>{`${meta.name} :: ${meta.role}`}</title>
-        <meta name="description" content={meta.description} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={meta.name} />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:url" content={meta.url} />
-        <meta property="og:image" content={meta.image} />
-        <meta property="og:site_name" content={meta.site} />
-
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={meta.name} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:url" content={meta.url} />
-        <meta name="twitter:site" content={meta.creator} />
-      </Head>
-
       <div className="max-w-screen relative min-h-screen bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-200">
         {image && (
           <Image
