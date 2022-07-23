@@ -2,7 +2,7 @@ import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { PhotoAttribution } from '@/components/PhotoAttribution'
 import { meta } from '@/config/meta'
-import { images } from '@/config/unsplash'
+import { error, UnsplashImage } from '@/config/unsplash'
 
 const InternalServerError: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image, year }) => {
   return (
@@ -29,14 +29,12 @@ const InternalServerError: NextPage<InferGetStaticPropsType<typeof getStaticProp
 }
 
 export const getStaticProps: GetStaticProps<{
-  image: typeof images[number]
+  image: UnsplashImage
   year: number
 }> = async () => {
-  const index = Math.floor(Math.random() * images.length)
-
   return {
     props: {
-      image: images[index],
+      image: error,
       year: new Date().getFullYear(),
     },
     revalidate: 60,
