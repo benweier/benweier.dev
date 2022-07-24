@@ -8,11 +8,12 @@ interface BackgroundImageProps {
 export const BackgroundImage = ({ image }: BackgroundImageProps) => {
   return (
     <Image
+      id="background-image"
       src={image.src}
       alt={image.alt}
       width={image.width}
       height={image.height}
-      className="full-page-background absolute inset-0 h-full max-h-full w-full max-w-full object-cover opacity-40 blur-sm"
+      className="absolute inset-0 h-full max-h-full w-full max-w-full object-cover opacity-40 blur-sm"
     />
   )
 }

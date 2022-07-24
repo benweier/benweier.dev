@@ -4,6 +4,7 @@ import avatar from '@/images/avatar.png'
 export const Avatar = () => {
   return (
     <Image
+      id="avatar"
       src={avatar}
       alt="Stylised avatar of Ben Weier"
       width={132}
