@@ -1,7 +1,7 @@
-import { images } from '@/config/unsplash'
+import { UnsplashImage } from '@/config/unsplash'
 
 interface PhotoAttributionProps {
-  image: typeof images[number]
+  image: UnsplashImage
 }
 
 export const PhotoAttribution = ({ image }: PhotoAttributionProps) => {
