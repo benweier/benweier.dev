@@ -4,14 +4,11 @@ context('benweier.dev', () => {
   })
 
   it('renders a background image', () => {
-    cy.get('.full-page-background').should('have.attr', 'src')
-    cy.get('.full-page-background').should('have.attr', 'alt')
-    cy.get('.full-page-background').should('have.attr', 'width')
-    cy.get('.full-page-background').should('have.attr', 'height')
+    cy.get('#background-image').should('exist')
   })
 
   it('renders an avatar', () => {
-    cy.get('main').findByAltText('Stylised avatar of Ben Weier').should('exist')
+    cy.get('#avatar').should('exist')
   })
 
   it('renders text content', () => {
@@ -20,9 +17,7 @@ context('benweier.dev', () => {
   })
 
   it('renders icon links', () => {
-    cy.get('main').findByTitle('GitHub').should('exist').should('have.attr', 'href', 'https://github.com/benweier')
-    cy.get('main').findByTitle('Twitter').should('exist').should('have.attr', 'href', 'https://twitter.com/benweier')
-    cy.get('main').findByTitle('Email').should('exist').should('have.attr', 'href', 'mailto:web@benweier.dev')
+    cy.get('#links').should('exist')
   })
 
   it('renders a copyright notice', () => {
@@ -32,10 +27,6 @@ context('benweier.dev', () => {
   })
 
   it('renders a photo attribution', () => {
-    cy.get('.photo-attribution')
-      .invoke('text')
-      .should('match', /^Photo by .+ on Unsplash$/)
-
-    cy.get('.photo-attribution a').should('have.attr', 'href')
+    cy.get('#photo-attribution').should('exist')
   })
 })
