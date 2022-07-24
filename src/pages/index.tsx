@@ -23,9 +23,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image,
               <p className="text-lg font-light uppercase">{meta.role}</p>
             </div>
 
-            <div className="grid grid-flow-col items-center justify-between gap-8">
-              <Links />
-            </div>
+            <Links />
           </main>
 
           <footer className="mx-8 grid w-full grid-flow-row items-center justify-center gap-4 text-center text-sm font-semibold md:grid-flow-col md:gap-8">
