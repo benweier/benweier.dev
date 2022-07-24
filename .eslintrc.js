@@ -96,7 +96,7 @@ module.exports = {
       },
     },
     {
-      files: ['cypress/**/*.cy.{js,jsx,ts,tsx}', 'src/**/*.cy.{js,jsx,ts,tsx}'],
+      files: ['cypress/**/*.cy.{js,jsx,ts,tsx}'],
       plugins: ['testing-library', 'cypress'],
       extends: ['plugin:cypress/recommended'],
       env: {
