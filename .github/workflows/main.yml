@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Cypress
+      - name: E2E
         uses: cypress-io/github-action@v4
         with:
           record: true
@@ -21,6 +21,15 @@ jobs:
           start: npm start
           wait-on: 'http://localhost:3000/ping'
           wait-on-timeout: 10
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Component
+        uses: cypress-io/github-action@v4
+        with:
+          install: false
+          component: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
