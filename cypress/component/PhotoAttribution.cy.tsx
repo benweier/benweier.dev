@@ -1,7 +1,7 @@
+import { PhotoAttribution } from '@/components/PhotoAttribution'
 import { UnsplashImage } from '@/config/unsplash'
-import { PhotoAttribution } from './PhotoAttribution'
 
-describe('PhotoAttribution', () => {
+context('PhotoAttribution', () => {
   it('should display photographer name with link', () => {
     cy.fixture('background-image.json').then((image: UnsplashImage) => {
       cy.mount(<PhotoAttribution image={image} />)

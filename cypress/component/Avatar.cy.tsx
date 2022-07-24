@@ -1,6 +1,6 @@
-import { Avatar } from './Avatar'
+import { Avatar } from '@/components/Avatar'
 
-describe('Avatar', () => {
+context('Avatar', () => {
   it('should render aan avatar image', () => {
     cy.mount(<Avatar />)
 

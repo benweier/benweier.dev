@@ -1,7 +1,7 @@
+import { BackgroundImage } from '@/components/BackgroundImage/BackgroundImage'
 import { UnsplashImage } from '@/config/unsplash'
-import { BackgroundImage } from './BackgroundImage'
 
-describe('BackgroundImage', () => {
+context('BackgroundImage', () => {
   it('should render a background image', () => {
     cy.fixture('background-image.json').then((image: UnsplashImage) => {
       cy.mount(<BackgroundImage image={image} />)

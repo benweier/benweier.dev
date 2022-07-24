@@ -1,6 +1,6 @@
-import { Links } from './Links'
+import { Links } from '@/components/Links'
 
-describe('Links', () => {
+context('Links', () => {
   it('should display a list of links', () => {
     cy.mount(<Links />)
 
