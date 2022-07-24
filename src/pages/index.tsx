@@ -1,4 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import { useTranslations } from 'next-intl'
+import { NextSeo } from 'next-seo'
 import { Avatar } from '@/components/Avatar'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Links } from '@/components/Links'
@@ -7,8 +9,16 @@ import { meta } from '@/config/meta'
 import { images, UnsplashImage } from '@/config/unsplash'
 
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image, year }) => {
+  const t = useTranslations('meta')
+
   return (
     <>
+      <NextSeo
+        description={t('description')}
+        openGraph={{
+          description: t('description'),
+        }}
+      />
       <div className="max-w-screen relative min-h-screen bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-200">
         <BackgroundImage image={image} />
 
@@ -42,13 +52,14 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image,
 export const getStaticProps: GetStaticProps<{
   image: UnsplashImage
   year: number
-}> = async () => {
+}> = async ({ locale }) => {
   const index = Math.floor(Math.random() * images.length)
 
   return {
     props: {
       image: images[index],
       year: new Date().getFullYear(),
+      messages: (await import(`@/intl/${locale}.json`)).default,
     },
     revalidate: 60,
   }
