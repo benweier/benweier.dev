@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "next lint",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run:e2e": "cypress run --e2e",
+    "cypress:run:component": "cypress run --component",
+    "cypress:run": "npm run cypress:run:e2e && npm run cypress:run:component"
   },
   "dependencies": {
     "next": "^12.2.3",
