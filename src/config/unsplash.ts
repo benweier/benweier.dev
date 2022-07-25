@@ -32,13 +32,12 @@ export const images: UnsplashImage[] = [
     width: 1920,
     height: 1280,
   },
+  {
+    name: 'Cosmic Timetraveler',
+    href: 'https://unsplash.com/photos/-SFhuMwFClk',
+    src: '/unsplash/cosmic-timetraveler--SFhuMwFClk-unsplash.jpg',
+    alt: 'roadway beside iced capped mountain during daytime',
+    height: 2400,
+    width: 1920,
+  },
 ]
-
-export const error: UnsplashImage = {
-  src: '/unsplash/cosmic-timetraveler--SFhuMwFClk-unsplash.jpg',
-  height: 2400,
-  width: 1920,
-  name: 'Cosmic Timetraveler',
-  alt: 'roadway beside iced capped mountain during daytime',
-  href: 'https://unsplash.com/photos/-SFhuMwFClk',
-}
