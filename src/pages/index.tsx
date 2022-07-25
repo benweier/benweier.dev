@@ -6,7 +6,7 @@ import { BackgroundImage } from '@/components/BackgroundImage'
 import { Links } from '@/components/Links'
 import { PhotoAttribution } from '@/components/PhotoAttribution'
 import { meta } from '@/config/meta'
-import { images, UnsplashImage } from '@/config/unsplash'
+import { UnsplashImage } from '@/config/unsplash'
 
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image, year }) => {
   const t = useTranslations('meta')
@@ -53,6 +53,7 @@ export const getStaticProps: GetStaticProps<{
   image: UnsplashImage
   year: number
 }> = async ({ locale }) => {
+  const images: UnsplashImage[] = (await import(`@/config/${locale}.json`)).default
   const index = Math.floor(Math.random() * images.length)
 
   return {
