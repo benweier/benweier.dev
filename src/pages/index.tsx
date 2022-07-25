@@ -52,7 +52,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image,
 export const getStaticProps: GetStaticProps<{
   image: UnsplashImage
   year: number
-}> = async ({ locale }) => {
+}> = async ({ locale = 'en' }) => {
   const images: UnsplashImage[] = (await import(`@/config/${locale}.json`)).default
   const index = Math.floor(Math.random() * images.length)
 
