@@ -1,3 +1,4 @@
+import { Anchor } from '@/components/Anchor'
 import { UnsplashImage } from '@/config/unsplash'
 
 interface PhotoAttributionProps {
@@ -7,14 +8,7 @@ interface PhotoAttributionProps {
 export const PhotoAttribution = ({ image }: PhotoAttributionProps) => {
   return (
     <div id="photo-attribution">
-      Photo by{' '}
-      <a className="underline" href={image.href}>
-        {image.name}
-      </a>{' '}
-      on{' '}
-      <a className="underline" href="https://unsplash.com">
-        Unsplash
-      </a>
+      Photo by <Anchor href={image.href}>{image.name}</Anchor> on <Anchor href="https://unsplash.com">Unsplash</Anchor>
     </div>
   )
 }
