@@ -1,19 +1,21 @@
 import { IconContext } from 'react-icons'
 import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa'
+import { Anchor } from '@/components/Anchor'
+import styles from './styles.module.css'
 
 export const Links = () => {
   return (
     <div id="links" className="grid grid-flow-col items-center justify-between gap-8">
       <IconContext.Provider value={{ size: '28', color: 'currentColor' }}>
-        <a href="https://github.com/benweier" aria-label="GitHub" className="p-2" title="GitHub">
+        <Anchor href="https://github.com/benweier" aria-label="GitHub" className={styles.link} title="GitHub">
           <FaGithub />
-        </a>
-        <a href="https://twitter.com/benweier" aria-label="Twitter" className="p-2" title="Twitter">
+        </Anchor>
+        <Anchor href="https://twitter.com/benweier" aria-label="Twitter" className={styles.link} title="Twitter">
           <FaTwitter />
-        </a>
-        <a href="mailto:web@benweier.dev" aria-label="Email" className="p-2" title="Email">
+        </Anchor>
+        <Anchor href="mailto:web@benweier.dev" aria-label="Email" className={styles.link} title="Email">
           <FaEnvelope />
-        </a>
+        </Anchor>
       </IconContext.Provider>
     </div>
   )

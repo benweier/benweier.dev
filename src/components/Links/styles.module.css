@@ -1,0 +1,3 @@
+.link {
+  @apply rounded-full p-2 transition-all duration-75 hover:scale-125 focus:scale-125;
+}
