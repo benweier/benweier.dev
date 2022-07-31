@@ -13,6 +13,7 @@ export const Avatar = () => {
       placeholder="blur"
       sizes="132px"
       loading="eager"
+      quality={100}
     />
   )
 }

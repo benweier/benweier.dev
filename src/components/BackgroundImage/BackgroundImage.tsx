@@ -13,7 +13,8 @@ export const BackgroundImage = ({ image }: BackgroundImageProps) => {
       alt={image.alt}
       width={image.width}
       height={image.height}
-      className="absolute inset-0 h-full max-h-full min-h-screen w-full min-w-full max-w-full object-cover object-center opacity-40 blur-sm"
+      quality={80}
+      className="absolute h-full max-h-full min-h-screen w-full min-w-full max-w-full object-cover object-center opacity-40 blur-sm"
     />
   )
 }
