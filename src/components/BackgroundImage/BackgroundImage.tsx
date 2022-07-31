@@ -1,8 +1,8 @@
 import Image from 'next/future/image'
-import { images } from '@/config/unsplash'
+import { UnsplashImage } from '@/config/unsplash'
 
 interface BackgroundImageProps {
-  image: typeof images[number]
+  image: UnsplashImage
 }
 
 export const BackgroundImage = ({ image }: BackgroundImageProps) => {
