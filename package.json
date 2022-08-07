@@ -14,6 +14,8 @@
     "cypress:run": "npm run cypress:run:e2e && npm run cypress:run:component"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
+    "@heroicons/react": "^1.0.6",
     "clsx": "^1.2.1",
     "next": "^12.2.4",
     "next-intl": "^2.7.4",
