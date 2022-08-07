@@ -4,6 +4,7 @@ import { NextSeo } from 'next-seo'
 import { Avatar } from '@/components/Avatar'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Links } from '@/components/Links'
+import { LocaleSelect } from '@/components/LocaleSelect'
 import { PhotoAttribution } from '@/components/PhotoAttribution'
 import { meta } from '@/config/meta'
 import { UnsplashImage } from '@/config/unsplash'
@@ -43,6 +44,8 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image,
 
             <PhotoAttribution image={image} />
           </footer>
+
+          <LocaleSelect />
         </div>
       </div>
     </>
