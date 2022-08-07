@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { flip, offset, shift, useFloating, autoUpdate } from '@floating-ui/react-dom'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
