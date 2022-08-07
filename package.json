@@ -14,6 +14,7 @@
     "cypress:run": "npm run cypress:run:e2e && npm run cypress:run:component"
   },
   "dependencies": {
+    "@floating-ui/react-dom": "^1.0.0",
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
     "clsx": "^1.2.1",
