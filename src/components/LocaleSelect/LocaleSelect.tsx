@@ -37,7 +37,7 @@ export const LocaleSelect = () => {
           <Listbox
             value={locale}
             onChange={(locale) => {
-              document.cookie = `NEXT_LOCALE=${locale}`
+              document.cookie = `NEXT_LOCALE=${locale}; samesite=lax; secure; max-age=${60 * 60 * 24 * 30};`
               push({ pathname, query }, asPath, { locale })
             }}
           >
