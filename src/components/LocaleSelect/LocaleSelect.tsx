@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { flip, offset, shift, useFloating, autoUpdate } from '@floating-ui/react-dom'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
@@ -14,6 +14,7 @@ const localeLabels: Record<string, string> = {
 
 export const LocaleSelect = () => {
   const { locale, locales, push, pathname, query, asPath } = useRouter()
+  const [value, setValue] = useState(locale)
   const { x, y, reference, floating, strategy, refs, update } = useFloating({
     strategy: 'absolute',
     placement: 'bottom',
@@ -32,12 +33,13 @@ export const LocaleSelect = () => {
 
   return (
     <>
-      {locale && (
+      {value && (
         <div className="w-64">
           <Listbox
-            value={locale}
-            onChange={(locale) => {
-              document.cookie = `NEXT_LOCALE=${locale}; samesite=lax; secure; max-age=${60 * 60 * 24 * 30};`
+            value={value}
+            onChange={(value) => {
+              document.cookie = `NEXT_LOCALE=${value}; samesite=lax; secure; max-age=${60 * 60 * 24 * 30};`
+              setValue(value)
               push({ pathname, query }, asPath, { locale })
             }}
           >
@@ -51,9 +53,9 @@ export const LocaleSelect = () => {
                 >
                   <div className="flex items-center justify-start gap-3">
                     <span>
-                      <Image src={`/flags/${locale}.png`} width={16} height={16} quality={100} />
+                      <Image src={`/flags/${value}.png`} width={16} height={16} quality={100} />
                     </span>
-                    <span className="block flex-1 truncate">{localeLabels[locale]}</span>
+                    <span className="block flex-1 truncate">{localeLabels[value]}</span>
                     <span className="pointer-events-none text-gray-400">
                       <SelectorIcon className="h-5 w-5" aria-hidden="true" />
                     </span>
