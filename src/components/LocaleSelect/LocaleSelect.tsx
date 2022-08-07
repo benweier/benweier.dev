@@ -37,9 +37,9 @@ export const LocaleSelect = () => {
         <div className="w-64">
           <Listbox
             value={value}
-            onChange={(value) => {
-              document.cookie = `NEXT_LOCALE=${value}; samesite=lax; secure; max-age=${60 * 60 * 24 * 30};`
-              setValue(value)
+            onChange={(locale) => {
+              document.cookie = `NEXT_LOCALE=${locale}; samesite=lax; secure; max-age=${60 * 60 * 24 * 30};`
+              setValue(locale)
               push({ pathname, query }, asPath, { locale })
             }}
           >
