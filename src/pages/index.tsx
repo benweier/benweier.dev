@@ -8,6 +8,7 @@ import { LocaleSelect } from '@/components/LocaleSelect'
 import { PhotoAttribution } from '@/components/PhotoAttribution'
 import { meta } from '@/config/meta'
 import { UnsplashImage } from '@/config/unsplash'
+import { getImage, getMessages } from '@/utilities/pages'
 
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image, year }) => {
   const t = useTranslations('meta')
@@ -56,14 +57,14 @@ export const getStaticProps: GetStaticProps<{
   image: UnsplashImage
   year: number
 }> = async ({ locale = 'en' }) => {
-  const images: UnsplashImage[] = (await import(`@/config/${locale}.json`)).default
-  const index = Math.floor(Math.random() * images.length)
+  const image = await getImage(locale)
+  const messages = await getMessages(locale)
 
   return {
     props: {
-      image: images[index],
+      image,
       year: new Date().getFullYear(),
-      messages: (await import(`@/intl/${locale}.json`)).default,
+      messages,
     },
     revalidate: 60,
   }
