@@ -53,7 +53,7 @@ export const LocaleSelect = () => {
                 >
                   <div className="flex items-center justify-start gap-3">
                     <span>
-                      <Image src={`/flags/${value}.png`} width={16} height={16} quality={100} />
+                      <Image src={`/flags/${value}.png`} alt={value} width={16} height={16} quality={100} />
                     </span>
                     <span className="block flex-1 truncate">{localeLabels[value]}</span>
                     <span className="pointer-events-none text-gray-400">
@@ -102,7 +102,13 @@ export const LocaleSelect = () => {
                             {({ selected }) => (
                               <div className="flex items-center justify-start gap-3">
                                 <span>
-                                  <Image src={`/flags/${locale}.png`} width={16} height={16} quality={100} />
+                                  <Image
+                                    src={`/flags/${locale}.png`}
+                                    alt={locale}
+                                    width={16}
+                                    height={16}
+                                    quality={100}
+                                  />
                                 </span>
                                 <span className="block flex-1 truncate">{localeLabels[locale]}</span>
                                 {selected ? (
