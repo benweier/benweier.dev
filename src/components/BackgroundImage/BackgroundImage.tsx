@@ -15,6 +15,7 @@ export const BackgroundImage = ({ image }: BackgroundImageProps) => {
         width={image.width}
         height={image.height}
         quality={80}
+        placeholder="blur"
         blurDataURL={image.blurDataURL}
         className="h-full w-full object-cover object-center opacity-40 blur-sm"
       />
