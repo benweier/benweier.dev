@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react'
-import { flip, offset, shift, useFloating, autoUpdate } from '@floating-ui/react-dom'
+import { useState } from 'react'
+import { autoPlacement, autoUpdate, offset, shift, useFloating } from '@floating-ui/react-dom-interactions'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
 import { clsx } from 'clsx'
@@ -15,21 +15,19 @@ const localeLabels: Record<string, string> = {
 export const LocaleSelect = () => {
   const { locale, locales, push, pathname, query, asPath } = useRouter()
   const [value, setValue] = useState(locale)
-  const { x, y, reference, floating, strategy, refs, update } = useFloating({
+  const { x, y, reference, floating, strategy } = useFloating({
     strategy: 'absolute',
     placement: 'bottom',
-    middleware: [offset(5), flip(), shift({ padding: 10 })],
+    middleware: [
+      offset(10),
+      autoPlacement({
+        padding: 10,
+        allowedPlacements: ['top', 'bottom'],
+      }),
+      shift({ padding: 10 }),
+    ],
+    whileElementsMounted: autoUpdate,
   })
-
-  const xy = useMemo(() => [x, y], [x, y])
-
-  useEffect(() => {
-    if (!refs.reference.current || !refs.floating.current) {
-      return
-    }
-
-    return autoUpdate(refs.reference.current, refs.floating.current, update)
-  }, [refs.reference, refs.floating, update, xy])
 
   return (
     <>
@@ -56,8 +54,11 @@ export const LocaleSelect = () => {
                       <Image src={`/flags/${value}.png`} alt={value} width={16} height={16} quality={100} />
                     </span>
                     <span className="block flex-1 truncate">{localeLabels[value]}</span>
-                    <span className="pointer-events-none text-gray-400">
-                      <SelectorIcon className="h-5 w-5" aria-hidden="true" />
+                    <span className="pointer-events-none inline-flex h-5 w-5 items-center justify-center text-gray-400">
+                      <SelectorIcon
+                        className={clsx('h-5 w-5 transition-all duration-75 ease-in-out', { ['rotate-90']: open })}
+                        aria-hidden="true"
+                      />
                     </span>
                   </div>
                 </Listbox.Button>
@@ -68,24 +69,23 @@ export const LocaleSelect = () => {
                     top: 0,
                     transform:
                       typeof x === 'number' && typeof y === 'number'
-                        ? `translate(${Math.round(x)}px,${Math.round(y)}px)`
+                        ? `translate3d(${Math.round(x)}px, ${Math.round(y)}px, 0)`
                         : undefined,
                   }}
                 >
                   <Transition
                     show={open}
-                    enter="transition-opacity ease-in duration-100"
-                    leave="transition-opacity ease-in duration-100"
                     enterFrom="opacity-0"
                     enterTo="opacity-100"
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
+                    className="transition-opacity duration-75 ease-in"
                   >
                     {locales && (
                       <Listbox.Options
                         static
                         className={
-                          'max-h-60 w-64 overflow-auto rounded bg-gray-100/[0.3] p-1 text-base ring ring-gray-900 ring-opacity-5 backdrop-blur transition-colors duration-75 ease-in-out focus:outline-none dark:bg-gray-900/[0.3] sm:text-sm'
+                          'max-h-60 w-64 overflow-auto rounded bg-gray-200/[0.9] p-1 text-base ring ring-gray-900 ring-opacity-5 backdrop-blur transition-colors duration-75 ease-in-out focus:outline-none dark:bg-gray-800/[0.9] sm:text-sm'
                         }
                       >
                         {locales.map((locale) => (
@@ -94,7 +94,7 @@ export const LocaleSelect = () => {
                             className={({ active, selected }) =>
                               clsx('relative select-none rounded py-2 px-3', {
                                 'bg-slate-600/[0.2] text-gray-900 dark:bg-slate-200/[0.2] dark:text-gray-100': active,
-                                'font-bold text-gray-700 dark:text-gray-200': selected,
+                                'text-gray-700 dark:text-gray-200': selected,
                               })
                             }
                             value={locale}
@@ -111,11 +111,11 @@ export const LocaleSelect = () => {
                                   />
                                 </span>
                                 <span className="block flex-1 truncate">{localeLabels[locale]}</span>
-                                {selected ? (
+                                {selected && (
                                   <span className="text-sky-600 dark:text-sky-400">
                                     <CheckIcon className="h-5 w-5" aria-hidden="true" />
                                   </span>
-                                ) : null}
+                                )}
                               </div>
                             )}
                           </Listbox.Option>
