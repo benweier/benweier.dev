@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { autoPlacement, autoUpdate, offset, shift, useFloating } from '@floating-ui/react-dom-interactions'
 import { Listbox, Transition } from '@headlessui/react'
-import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { clsx } from 'clsx'
 import Image from 'next/future/image'
 import { useRouter } from 'next/router'
@@ -54,9 +54,9 @@ export const LocaleSelect = () => {
                       <Image src={`/flags/${value}.png`} alt={value} width={16} height={16} quality={100} />
                     </span>
                     <span className="block flex-1 truncate">{localeLabels[value]}</span>
-                    <span className="pointer-events-none inline-flex h-5 w-5 items-center justify-center text-gray-400">
-                      <SelectorIcon
-                        className={clsx('h-5 w-5 transition-all duration-75 ease-in-out', { ['rotate-90']: open })}
+                    <span className="pointer-events-none inline-flex h-4 w-4 items-center justify-center text-gray-400">
+                      <ChevronUpDownIcon
+                        className={clsx('h-4 w-4 transition-all duration-75 ease-in-out', { ['rotate-90']: open })}
                         aria-hidden="true"
                       />
                     </span>
@@ -112,8 +112,8 @@ export const LocaleSelect = () => {
                                 </span>
                                 <span className="block flex-1 truncate">{localeLabels[locale]}</span>
                                 {selected && (
-                                  <span className="text-sky-600 dark:text-sky-400">
-                                    <CheckIcon className="h-5 w-5" aria-hidden="true" />
+                                  <span className="h-4 w-4 text-sky-600 dark:text-sky-400">
+                                    <CheckIcon className="h-4 w-4" aria-hidden="true" />
                                   </span>
                                 )}
                               </div>
