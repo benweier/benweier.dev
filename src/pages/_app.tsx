@@ -4,7 +4,7 @@ import { AppProps } from 'next/app'
 import { meta } from '@/config/meta'
 import '@/styles/tailwind.css'
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps<{ messages: IntlMessages }>) => {
   return (
     <>
       <NextIntlProvider messages={pageProps.messages}>
