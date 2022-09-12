@@ -1,7 +1,7 @@
 import { Avatar } from '@/components/Avatar'
 
 context('Avatar', () => {
-  it('should render aan avatar image', () => {
+  it('should render an avatar image', () => {
     cy.mount(<Avatar />)
 
     cy.get('#avatar').should('have.attr', 'src')
