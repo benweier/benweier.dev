@@ -11,9 +11,6 @@ const config = {
     imageSizes: [132],
     deviceSizes: [380, 640, 768, 1024, 1200],
   },
-  experimental: {
-    newNextLinkBehavior: true,
-  },
 }
 
 module.exports = config
