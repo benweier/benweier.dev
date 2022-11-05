@@ -3,7 +3,7 @@ import { autoPlacement, autoUpdate, offset, shift, useFloating } from '@floating
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { clsx } from 'clsx'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 const localeLabels: Record<string, string> = {
