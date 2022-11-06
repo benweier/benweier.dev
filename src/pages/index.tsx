@@ -22,7 +22,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ image,
         }}
       />
       <div className="max-w-screen relative min-h-screen bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-200">
-        <BackgroundImage image={image} />
+        <BackgroundImage key={image.src} image={image} />
 
         <div className="relative z-10 grid min-h-screen grid-flow-row items-center justify-items-center gap-8 px-8 py-16 md:gap-16 md:py-24 xl:py-32">
           <main className="grid w-full max-w-xs grid-flow-row justify-items-center gap-8 rounded-md bg-gray-100/40 p-12 backdrop-blur dark:bg-gray-900/40">
