@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@floating-ui/react-dom": "^1.0.1",
-    "@floating-ui/react-dom-interactions": "^0.10.3",
+    "@floating-ui/react-dom-interactions": "^0.13.3",
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
     "clsx": "^1.2.1",
