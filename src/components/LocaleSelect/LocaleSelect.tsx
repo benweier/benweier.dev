@@ -46,7 +46,7 @@ export const LocaleSelect = () => {
                 <Listbox.Button
                   ref={reference}
                   className={
-                    'relative w-full rounded bg-gray-100/[0.3] py-2 px-4 text-left backdrop-blur focus:outline-none focus-visible:ring focus-visible:ring-sky-600 focus-visible:ring-opacity-75 dark:bg-gray-900/[0.3] dark:focus-visible:ring-sky-400 sm:text-sm'
+                    'relative w-full rounded bg-gray-100/[0.3] px-4 py-2 text-left backdrop-blur focus:outline-none focus-visible:ring focus-visible:ring-sky-600 focus-visible:ring-opacity-75 dark:bg-gray-900/[0.3] dark:focus-visible:ring-sky-400 sm:text-sm'
                   }
                 >
                   <div className="flex items-center justify-start gap-3">
@@ -92,7 +92,7 @@ export const LocaleSelect = () => {
                           <Listbox.Option
                             key={locale}
                             className={({ active, selected }) =>
-                              clsx('relative select-none rounded py-2 px-3', {
+                              clsx('relative select-none rounded px-3 py-2', {
                                 'bg-slate-600/[0.2] text-gray-900 dark:bg-slate-200/[0.2] dark:text-gray-100': active,
                                 'text-gray-700 dark:text-gray-200': selected,
                               })
